@@ -1,22 +1,27 @@
+import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
-  SidebarHeader,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
-// Menu items
+// Menu items.
 const items = [
   {
     title: "Home",
     url: "#",
-    icon: "home", 
+    icon: Home,
   },
   {
     title: "Inbox",
     url: "#",
-    icon: "inbox",
+    icon: Inbox,
   },
   {
     title: "Calendar",
