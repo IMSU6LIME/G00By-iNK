@@ -12,23 +12,26 @@ export const metadata: Metadata = {
 
 const orbitron = Orbitron({
   subsets: ["latin"],
-  display: "swap",
+
 });        
+
          
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html> 
+    <html lang='en'> 
+    <body className={orbitron.className}>
     <SidebarProvider>
-      <AppSidebar />
-      <body>
+    <AppSidebar />
+      
         <main>
         
         <SidebarTrigger />
         {children}
         </main>
+        </SidebarProvider>
         </body>
       
-    </SidebarProvider>
+    
     </html>
   )
 }
