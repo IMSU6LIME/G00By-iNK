@@ -10,28 +10,25 @@ export const metadata: Metadata = {
   description: "The world is finally ready...",
 };
 
-const orbitron = Orbitron({
-  subsets: ["latin"],
-
-});        
+const orbitron = Orbitron({subsets: ["latin"]});        
 
          
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'> 
     <body className={orbitron.className}>
+   
     <SidebarProvider>
     <AppSidebar />
       
         <main>
-        
         <SidebarTrigger />
         {children}
         </main>
-        </SidebarProvider>
-        </body>
-      
+
+     </SidebarProvider>
     
+     </body>
     </html>
   )
 }
